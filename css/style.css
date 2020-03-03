@@ -16,6 +16,7 @@ Dark green: #28b485
 }
 
 html {
+  /*in case user change the font-size in the browser we set to percentages from px*/
   font-size: 62.5%;
 }
 
@@ -47,7 +48,7 @@ body {
 .header__logoBox {
   position: absolute;
   top: 4rem;
-  left: 5rem;
+  left: 4rem;
 }
 
 .header__logo {
@@ -132,7 +133,6 @@ body {
     transform: translateY(0);
   }
 }
-
 
 .button:link,
 .button:visited {
