@@ -1,66 +1,3 @@
-* *::after,
-* *::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit; }
-
-html {
-  /*in case user changes the font-size in the browser we set to percentages from px*/
-  font-size: 62.5%; }
-
-body {
-  font-family: 'Lato', 'sens-serif';
-  font-weight: 400;
-  /* font-size: 16px */
-  line-height: 1.7;
-  color: #777;
-  padding: 3rem;
-  box-sizing: border-box; }
-
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
-  /* it always fits to the viewHeight of the box which here is 95 % of
-   the view as we metion in the height of the header */
-  background-size: cover;
-  background-position: top;
-  position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
-  .header_logoBox {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
-  .header__logo {
-    height: 3.5rem; }
-  .header__textBox {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
-
-.headingPrimary {
-  color: #fff;
-  text-transform: uppercase;
-  /* in case if the animation shakes use backface-visibility  */
-  backface-visibility: hidden;
-  margin-bottom: 6rem; }
-  .headingPrimary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-out; }
-  .headingPrimary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.75rem;
-    animation-name: moveInRight;
-    animation: moveInRight 1s ease-out; }
-
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -88,6 +25,49 @@ body {
   100 {
     opacity: 1;
     transform: translateY(0); } }
+
+* *::after,
+* *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  /*in case user changes the font-size in the browser we set to percentages from px*/
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Lato', 'sens-serif';
+  font-weight: 400;
+  /* font-size: 16px */
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem; }
+
+.headingPrimary {
+  color: #fff;
+  text-transform: uppercase;
+  /* in case if the animation shakes use backface-visibility  */
+  backface-visibility: hidden;
+  margin-bottom: 6rem; }
+  .headingPrimary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
+  .headingPrimary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation-name: moveInRight;
+    animation: moveInRight 1s ease-out; }
 
 .button:link, .button:visited {
   text-transform: uppercase;
@@ -131,3 +111,25 @@ body {
 .button--animated {
   animation: moveInBottom .5s ease-out .75s;
   animation-fill-mode: backwards; }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  /* it always fits to the viewHeight of the box which here is 95 % of
+   the view as we metion in the height of the header */
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  .header_logoBox {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__textBox {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
